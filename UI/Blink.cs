@@ -5,7 +5,8 @@ using System.Collections;
 /// This script adds a blink effect on a GUIText. Plays with color alpha
 /// making the text continually appear and disappear.
 /// </summary>
-public class Blink : MonoBehaviour {
+public class Blink : MonoBehaviour
+{
 	/// <summary>
 	/// The blink duration from visible state to invisble state.
 	/// </summary>
@@ -17,7 +18,8 @@ public class Blink : MonoBehaviour {
 	private float _timer;
 	private float _tmpDeltaTime;
 	
-	void Start () {
+	void Start ()
+	{
 		#if UNITY_EDITOR
 		// Security check only in editor mode
 		if(guiText == null)
@@ -37,7 +39,8 @@ public class Blink : MonoBehaviour {
 		_timer = Time.time; // Start the timer
 	}
 	
-	void Update () {
+	void Update ()
+	{
 		#if UNITY_EDITOR
 		// In editor, retreive the last value of the text color to make possible
 		// to change it during play mode.
